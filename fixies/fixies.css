@@ -1,0 +1,471 @@
+/* *** CSS Styles  *** */
+
+body {
+	background-color: #CC9;
+	background-image: url("images/sunflowers.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;
+	margin: 2%;
+	font-size: 1em;
+}
+
+
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: Arial,Helvetica,sans-serif;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+     font-size: 1.85em;
+}
+
+@media screen and (max-width: 750px) {
+h2 {
+     margin: 1% 0;
+	 font-size: 1.50em;
+	 line-height: 1.5em;
+}
+}
+
+@media screen and (max-width: 500px) {
+h2 {
+     margin: 1% 0;
+	 font-size: 1.25em;
+	 line-height: 1em;
+}
+}
+
+h4 {
+     font-size: 0.85em;
+}
+
+H1 a {
+     color: #00CC33;
+}
+
+p {
+     font-size: 0.85em;
+     line-height: 1em;
+}
+
+a img {
+     border: medium none;
+}
+
+a:link {
+     color: #FFCC00;
+     text-decoration: underline;
+}
+
+a:visited {
+     color: #6E6C64;
+     text-decoration: underline;
+}
+
+a:hover, a:active, a:focus {
+     color: #FFCC00;
+     font-family: "league-gothic-1","league-gothic-2","League Gothic","Arial Narrow",Arial,sans-serif;
+     font-size: 1.75em;
+     text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+
+header {
+	overflow: hidden;
+}
+
+.main-title {
+	font: normal 1.5em Calibri, Candara, Segoe, »
+	"Segoe UI", Optima, Arial, Helvetica, »
+	sans-serif;
+}
+
+header.fluid-ratio h1 {
+	font-size: 1.50em;
+	margin: 1% 0;
+	line-height: .85em;	
+}
+
+header.fluid-ratio h2 {
+	font-size: 1.25em;
+	margin: 1% 0;
+	line-height: 1em;	
+}
+
+header.fluid-ratio h4 {
+	font-size: .85em;
+	margin: 0;
+	line-height: .85em;
+	text-shadow: 2px 2px 12px #FFFFFF;	
+}
+
+header.fluid-ratio p {
+	font-weight: normal;	
+}
+
+header.fluid-ratio.intro {
+	width: 100%;
+	height: 0;
+	margin: 0;
+	padding: 0 0 25% 0;
+	line-height: .85 em;
+}
+
+header.fluid-ratio.intro p {
+	font-size: .85em;
+	margin: 0;
+	line-height: .85 em;
+	text-shadow: 2px 2px 12px #FFFFFF;
+	color: #000;
+}
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+header {
+	overflow: hidden;
+}
+
+.main-title {
+	font: normal 1.5em Calibri, Candara, Segoe, »
+	"Segoe UI", Optima, Arial, Helvetica, »
+	sans-serif; /* 24px / 16px */
+}
+
+header.fluid-ratio h1 {
+	font-size: 1em;
+	margin: 0;
+	line-height: .85 em;	
+}
+
+header.fluid-ratio h2 {
+	font-size: .95em;
+	margin: 0;
+	line-height: .85 em;	
+}
+
+header.fluid-ratio h4 {
+	font-size: .65em;
+	margin: 0;
+	line-height: .65em;
+	text-shadow: 2px 2px 12px #FFFFFF;	
+}
+
+.intro {
+	width: 100%;
+	height: 0;
+	margin: 0;
+	padding: 0 0 25% 0;
+	line-height: .85 em;
+}
+
+.intro p {
+	font-size: .55em;
+	margin: 0;
+	line-height: .55 em;
+	text-shadow: 2px 2px 12px #FFFFFF;
+	color: #000;
+	font-weight: normal;
+}
+
+}
+
+#container {
+     background-color: #E3E3E3;
+     height: 0;
+     margin: 15px auto;
+     width: 90%;
+}
+
+#header {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+	 overflow: hidden;
+}
+
+header {
+     margin: 0;
+     opacity: 1;
+     padding: 0;
+}
+
+header.fixedratio {
+     background-image: url("images/header-bg.png");
+	 background-size: 100%;
+}
+
+
+@mixin fluid-ratio (large-size, $small-size) {
+	$width-large: nth($large-size,1);
+	$width-small: nth($small-size,1);
+	$height-large:nth($large-size,2);
+	$height-small: nth($small-size,2);
+	$slope:($height-large - $height-small)/($width-large - $width-small);	
+	$height: $height-small - $width-small * $slope;
+	padding-top: $slope*100%;
+	height=$height;
+	background-size: cover;
+	-moz-background-size: cover;
+	background-position: center;
+}
+	
+.fluid-ratio {
+	background-image: url("images/header-bg.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0px;
+	padding: 3%;
+	height: 0;
+	padding-bottom: 50%;
+}
+
+header.fluid-ratio h1, header.fluid-ratio h2, header.fluid-ratio h4 {
+     color: #FFFFFF;
+     text-shadow: 3px 3px 4px #333333;
+}
+
+header.fluid-ratio h2 {
+	color: #FF3300;
+}
+
+@media screen and (max-width: 500px) {
+header.fluid-ratio h2 {
+     font-size: 0.75em;
+     margin: 2% 0 0 0;
+}
+}
+
+header.fluid-ratio h4 {
+     color: #FFCC33;
+}
+
+@media screen and (max-width: 500px) {
+header.fluid-ratio h4 {
+     color: #FFCC33;
+     font-size: 0.65em;
+     margin: 1% 0;
+}
+}
+
+#logo {
+	width: 15%;
+	height: 0;
+	padding-bottom: 9.05%;
+	background-image: url("images/fixie.png");
+	background-repeat: norepeat;
+	background-position: 0 0;
+	background-size: 200%;
+	display:block;
+}
+
+#logo {
+	margin: 1% 1% 1% 1.17%;
+}
+
+div#logo:hover {
+	background-position: 100% 0; /* Use ONLY percents here */
+	margin-left: 0.00%;
+}
+
+.alpha70 {
+     background: none repeat scroll 0% 0% #FFFFFF;
+     opacity: 0.7;
+}
+
+#content {
+	width: 100%;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 50%;
+	background-color: #ffffff;
+	display: block;
+	float: left;
+}
+
+#footer {
+	background-color: #E9E1BD;
+	font-size: 0.6em;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.scrim {
+     margin: 0px;
+     width: 100%;
+}
+
+#main {
+     background-color: #B0C6BD;
+     float: left;
+     height: 0;
+     margin: 0%;
+     padding: 3% 0px 110% 3%;
+     width: 97%;
+}
+
+.intro {
+     display: block;
+     float: left;
+     margin: 8% 0 0 0;
+     padding: 3%;
+     width: 70%;
+	 height: 20%;
+}
+
+.intro h1 {
+     font-size: 1.85em;
+     margin: 0px;
+     padding: 0px;
+}
+
+.intro p {
+     color: #333333;
+     font-family: "Arial Black",Gadget,sans-serif;
+     font-size: 0.75em;
+     font-weight: normal;
+     margin: 2% 0;
+     text-shadow: 2px 2px 12px #FFFFFF;
+}
+
+@media screen and (max-width: 500px) {
+.intro {
+     margin: 1% 0;
+}
+}
+
+@media screen and (max-width: 500px) {
+.intro h4 {
+	color: #FF9933;
+	font-family: "Arial Black",Gadget,sans-serif;
+	font-size: 0.75em;
+	font-weight: normal;
+	margin-bottom: 2%;
+	text-shadow: 2px 2px 12px #666;
+}
+}
+
+
+@media screen and (max-width: 500px) {
+.intro p {
+     color: #333333;
+     font-family: "Arial Black",Gadget,sans-serif;
+     font-size: 0.65em;
+     font-weight: normal;
+     margin-bottom: 2%;
+     text-shadow: 2px 2px 12px #FFFFFF;
+}
+}
+aside {
+     background-color: #786F68;
+     float: right;
+     height: 100%;
+     margin: 0%;
+     padding: 3%;
+     width: 32.9062%;
+}
+
+aside h4, aside p {
+     color: #FAFAFA;
+}
+
+img {
+     max-width: 100%;
+}
+
+.boxOuter4 {
+	background-color: #666666;
+	display: inline;
+	float: left;
+	height: 0px;
+	margin: 3% 3% 3% 0px;
+	padding: 0px 0px 22%;
+	width: 22%;
+}
+
+.boxOuterRight4 {
+     margin: 3% 0px 3% 3%;
+     max-width: 14.1667%;
+     padding: 0px;
+     width: 14.1667%;
+}
+
+.boxInner h3 {
+     font-size: 1.25em;
+}
+
+@media screen and (max-width: 500px) {
+.boxInner h3
+{
+  font-size: 0.75em;
+}
+
+}
+.boxInner p {
+     font-size: 0.75em;
+	 color: #fff;
+}
+
+
+@media screen and (max-width: 500px) {
+.boxInner p
+{
+  font-size: 0.65em;
+}
+
+}
+
+.boxOuter6 {
+     background-color: #B0C6BD;
+}
+
+.boxOuterRight6 {
+    
+}
+
+.boxInner {
+    background-color: #786F68;
+	background-image: url("images/bike4-a.jpg");
+	background-position: center center;
+	background-size: contain;
+	color: #FFFFFF;
+	height: 0px;
+	margin: 3%;
+	overflow: hidden;
+	padding: 3% 3% 88.5%;
+	width: 88.5%;
+}
+
+.boxInner6 h3 {
+	font-size: 1.25em;
+}
+
+.boxInner6 p {
+	font-size: 0.75em;
+}
+
+.copy {
+	max-width: 100%;
+	height: 0;
+	padding: 3% 3% 20%;
+	background-color: #fff;	
+}
+
+.cleaner {
+	background-color: #FFCC22;
+	display: block;
+	height: 1px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
